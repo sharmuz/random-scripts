@@ -1,9 +1,13 @@
 #!/bin/bash
-for pdf_file in ./split/**/*.pdf
+for pdf_file in ./pdf_dataset/**/*.pdf
 do
-    str="$pdf_file"
-    gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -q -o "$str.tmp" $str
-    rm $str
-    qpdf --object-streams=generate --split-pages=10 "$str.tmp" ${str%.pdf}_%d.pdf
-    rm "$str.tmp"
+    FILENAME="$pdf_file"
+    FILESIZE=$(stat -c%s "$FILENAME")
+    if [ $FILESIZE -gt 2000000 ]
+    then
+        gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -q -o "$FILENAME.tmp" $FILENAME
+        rm $FILENAME
+        qpdf --object-streams=generate --split-pages=10 "$FILENAME.tmp" ${FILENAME%.pdf}_%d.pdf
+        rm "$FILENAME.tmp"
+    fi
 done
