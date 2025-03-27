@@ -1,2 +1,3 @@
+link-mode = "copy"
 no-cache = true
 python-preference = "only-managed"
