@@ -1,4 +1,7 @@
 {
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
     "debugpy.debugJustMyCode": false,
     "editor.dragAndDrop": false,
     "editor.fontSize": 14,
@@ -28,9 +31,11 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "notebook.defaultFormatter": "charliermarsh.ruff",
     "notebook.stickyScroll.enabled": true,
     "python.analysis.typeCheckingMode": "off",
     "python.testing.pytestEnabled": true,
+    "ruff.lineLength": 88,
     "search.useIgnoreFiles": true,
     "telemetry.enableTelemetry": false,
     "telemetry.telemetryLevel": "off",
@@ -49,6 +54,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Dracula",
     "workbench.startupEditor": "welcomePage"
 }
