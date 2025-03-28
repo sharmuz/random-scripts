@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+declare -a extensions
+
+extensions=(
+    "python ms-python 2025.3.2025032601"
+    "vscode-pylance ms-python 2025.3.103"
+    "jupyter ms-toolsai 2025.2.0"
+    "ruff charliermarsh 2025.22.0"
+    "theme-dracula dracula-theme 2.25.1"
+)
+
+for x in "${extensions[@]}"; do
+    read -a myext <<<$x
+
+    ext_name=${myext[0]}
+    ext_pub=${myext[1]}
+    ext_ver=${myext[2]}
+    ext_url=https://${ext_pub}.gallery.vsassets.io/_apis/public/gallery/publisher/${ext_pub}/extension/${ext_name}/${ext_ver}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
+
+    curl -fsSL -o ${ext_name}.vsix $ext_url
+    code-server --install-extension ${ext_name}.vsix
+    rm ${ext_name}.vsix
+done
