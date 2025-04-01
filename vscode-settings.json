@@ -2,6 +2,10 @@
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
+    "[quarto]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "autoDocstring.startOnNewLine": true,
     "debugpy.debugJustMyCode": false,
     "editor.dragAndDrop": false,
     "editor.fontSize": 14,
