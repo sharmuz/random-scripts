@@ -9,9 +9,10 @@ extensions=(
     "jupyter ms-toolsai 2025.2.0"
     "ruff charliermarsh 2025.22.0"
     "autodocstring njpwerner 0.6.1"
-    # Git
+    # Git & GitHub
     "git-graph mhutchie 1.30.0"
     "better-git-line-blame mk12 0.2.14"
+    "copilot GitHub 1.294.1477"
     # Markup, scripting and data
     "rainbow-csv mechatroner 3.18.0"
     "vscode-yaml redhat 1.17.0"
