@@ -12,7 +12,8 @@ extensions=(
     # Git & GitHub
     "git-graph mhutchie 1.30.0"
     "better-git-line-blame mk12 0.2.14"
-    "copilot GitHub 1.294.1477"
+    "copilot GitHub 1.291.0"
+    "copilot-chat GitHub 0.25.1"
     # Markup, scripting and data
     "rainbow-csv mechatroner 3.18.0"
     "vscode-yaml redhat 1.17.0"
